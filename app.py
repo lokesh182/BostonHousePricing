@@ -12,6 +12,14 @@ model = pickle.load(open("regmodel.pkl",'rb')) #load the model
 def home():
     return render_template('home.html')
 
+@app.route('/predict',methods=['POST'])
+def predict():
+    data =[float(x) for x in request.form.values()]
+    final_input = scaler.transform(np.array(data).reshape(1,-1))
+    print(final_input)
+    output = model.predict(final_input)[0]
+    return render_template("home.html",prediction_text="The predicted price is {}".format(output))
+
 @app.route('/predict_api',methods=['POST'])
 
 def predict_api():

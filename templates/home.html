@@ -1,9 +1,72 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hello, World!</title>
+    <title>Input 13 Features</title>
 </head>
 <body>
-    <h1>Hello, World!</h1>
+    <div class="container">
+        <h2>Input Your 13 Features</h2>
+        <form action="{{url_for('predict')}}" method="post">
+            <div class="form-group">
+                <label for="CRIM">CRIM:</label>
+                <input type="text" id="CRIM" name="CRIM" placeholder="Enter CRIM value">
+            </div>
+            <div class="form-group">
+                <label for="ZN">ZN:</label>
+                <input type="text" id="ZN" name="ZN" placeholder="Enter ZN value">
+            </div>
+            <div class="form-group">
+                <label for="INDUS">INDUS:</label>
+                <input type="text" id="INDUS" name="INDUS" placeholder="Enter INDUS value">
+            </div>
+            <div class="form-group">
+                <label for="CHAS">CHAS:</label>
+                <input type="text" id="CHAS" name="CHAS" placeholder="Enter CHAS value">
+            </div>
+            <div class="form-group">
+                <label for="NOX">NOX:</label>
+                <input type="text" id="NOX" name="NOX" placeholder="Enter NOX value">
+            </div>
+            <div class="form-group">
+                <label for="RM">RM:</label>
+                <input type="text" id="RM" name="RM" placeholder="Enter RM value">
+            </div>
+            <div class="form-group">
+                <label for="AGE">AGE:</label>
+                <input type="number" id="AGE" name="AGE" placeholder="Enter AGE value">
+            </div>
+            <div class="form-group">
+                <label for="DIS">DIS:</label>
+                <input type="text" id="DIS" name="DIS" placeholder="Enter DIS value">
+            </div>
+            <div class="form-group">
+                <label for="RAD">RAD:</label>
+                <input type="text" id="RAD" name="RAD" placeholder="Enter RAD value">
+            </div>
+            <div class="form-group">
+                <label for="TAX">TAX:</label>
+                <input type="text" id="TAX" name="TAX" placeholder="Enter TAX value">
+            </div>
+            <div class="form-group">
+                <label for="PTRATIO">PTRATIO:</label>
+                <input type="text" id="PTRATIO" name="PTRATIO" placeholder="Enter PTRATIO value">
+            </div>
+            <div class="form-group">
+                <label for="B">B:</label>
+                <input type="text" id="B" name="B" placeholder="Enter B value">
+            </div>
+            <div class="form-group">
+                <label for="LSTAT">LSTAT:</label>
+                <input type="text" id="LSTAT" name="LSTAT" placeholder="Enter LSTAT value">
+            </div>
+            <!-- Repeat the above div for INDUS, CHAS, NOX, RM, AGE, DIS, RAD, TAX, PTRATIO, B, LSTAT -->
+
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    {{prediction_text}}
 </body>
 </html>
